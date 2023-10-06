@@ -198,11 +198,12 @@ The `container-tools:rhel8` is the fast application stream, containing most rece
 
 #### [Ubuntu](https://www.ubuntu.com)
 
-The podman package is available in the official repositories for Ubuntu 20.10
-and newer.
+The podman package is available in the official, `universe` repository for Ubuntu 20.10
+and newer.  If the `universe` repository is not added, an error such as: `E: Package 'podman' has no installation candidate` will be displayed.
 
 ```bash
 # Ubuntu 20.10 and newer
+sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get -y install podman
 ```
